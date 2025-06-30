@@ -19,7 +19,6 @@ class ServerConfig:
 class AudioConfig:
     """Audio and music-related configuration."""
     max_duration_seconds: int = 300  # 5 minutes
-    min_duration_seconds: int = 15
     search_limit_per_term: int = 10
     max_search_terms: int = 5
     max_search_results: int = 20
@@ -73,6 +72,9 @@ def get_config() -> tuple[ServerConfig, AudioConfig]:
     audio_config = AudioConfig(
         max_duration_seconds=int(os.getenv("BGM_MAX_DURATION", "300")),
         search_limit_per_term=int(os.getenv("BGM_SEARCH_LIMIT", "10")),
+        max_search_terms=int(os.getenv("BGM_MAX_SEARCH_TERMS", "5")),
+        max_search_results=int(os.getenv("BGM_MAX_SEARCH_RESULTS", "20")),
+        max_recommendations=int(os.getenv("BGM_MAX_RECOMMENDATIONS", "5")),
     )
     
     return server_config, audio_config

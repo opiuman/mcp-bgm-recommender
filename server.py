@@ -9,7 +9,6 @@ tracks from YouTube Music.
 import asyncio
 import logging
 import os
-import sys
 from typing import Any, Dict, List
 
 from mcp.server import Server
@@ -121,7 +120,7 @@ async def main():
         logging.info("Server stopped by user")
     except Exception as e:
         logging.error(f"Fatal error: {e}", exc_info=True)
-        sys.exit(1)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

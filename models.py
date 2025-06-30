@@ -2,7 +2,7 @@
 Data models for the Find BGM MCP server.
 """
 from dataclasses import dataclass
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 
 
 @dataclass

@@ -1,7 +1,7 @@
 """
 Music search and recommendation service using YouTube Music API.
 """
-from typing import Dict, List, Optional
+from typing import Dict, List
 import logging
 
 from config import AudioConfig
