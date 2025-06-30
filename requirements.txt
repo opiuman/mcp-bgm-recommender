@@ -1,0 +1,4 @@
+mcp>=0.3.0
+ytmusicapi>=1.10.0
+textblob>=0.17.1
+asyncio
